@@ -1,0 +1,65 @@
+:root {
+  --color-base-bg: hsl(148, 38%, 91%); /* Light Green */
+  --color-form-bg: hsl(0, 0%, 100%); /* White */
+  --color-btn-bg: hsl(169, 82%, 27%); /* Green */
+  --color-base-error: hsl(0, 66%, 56%); /* Red */
+  --color-base-text: hsl(186, 15%, 59%); /* Medium Grey */
+  --color-base-text-dark: hsl(187, 24%, 22%); /* Dark Grey */
+
+  --font-size-label: 1rem; /* 16px */
+}
+
+/* --- GLOBAL RESET --- */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  background-color: var(--color-base-bg);
+  font-family: "Karla", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400; /* 400, 700 */
+  font-style: normal;
+  padding: 0.5rem;
+}
+
+.contact-form {
+  display: flex;
+  margin-top: auto;
+  background-color: var(--color-form-bg);
+  padding: 1rem;
+}
+
+/* --- FOOTER --- */
+
+.footer {
+  margin-top: auto;
+  text-align: center;
+  color: var(--color-base-primary);
+}
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+  margin-bottom: 0.5rem;
+}
+
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
+
+.footer a {
+  /* color: var(--color-base-primary-green); */
+  text-decoration: none;
+  color: var(--color-base-primary);
+}
+
+.fa-github {
+  /* color: var(--color-base-primary-green); */
+  margin-left: 0.5rem;
+}
