@@ -53,20 +53,30 @@
             </label>
             <input type="email" id="email" name="email">
 
+
             <!-- Query Type -->
             <label for="query-type">
                 Query Type <span>*</span>
             </label>
 
-            <input type="radio" name="query-type" id="general-enquiry" value="general-enquiry" required>
-            <label for="general-enquiry">
-                General Enquiry
-            </label>
+            <div class="radio-group">
+                <div>
+                    <input type="radio" name="query-type" id="general-enquiry" value="general-enquiry" required>
+                    <label for="general-enquiry">
+                        General Enquiry
+                    </label>
+                </div>
 
-            <input type="radio" name="query-type" id="support-request" value="support-request" required>
-            <label for="support-request">
-                Support Request
-            </label>
+
+                <div>
+                    <input type="radio" name="query-type" id="support-request" value="support-request" required>
+                    <label for="support-request">
+                        Support Request
+                    </label>
+                </div>
+
+            </div>
+
 
             <!-- Message -->
             <label for="message">

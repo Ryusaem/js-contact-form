@@ -7,6 +7,8 @@
   --color-base-text-dark: hsl(187, 24%, 22%); /* Dark Grey */
 
   --font-size-label: 1rem; /* 16px */
+  --margin-bottom-label: 0.5rem; /* 8px */
+  --margin-bottom-input: 1rem; /* 8px */
 }
 
 /* --- GLOBAL RESET --- */
@@ -19,20 +21,78 @@
 body {
   display: flex;
   flex-direction: column;
-  height: 100vh;
+  justify-content: center;
+  align-items: center;
   background-color: var(--color-base-bg);
   font-family: "Karla", sans-serif;
   font-optical-sizing: auto;
   font-weight: 400; /* 400, 700 */
   font-style: normal;
-  padding: 0.5rem;
+  min-height: 100vh;
 }
 
 .contact-form {
-  display: flex;
   margin-top: auto;
   background-color: var(--color-form-bg);
   padding: 1rem;
+  border-radius: 0.5rem; /* 8px = 0.5rem */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.contact-form h1 {
+  margin-bottom: 1.5rem;
+  font-size: 1.5rem;
+  color: var(--color-base-text-dark);
+  font-weight: 700;
+}
+
+.contact-form label {
+  display: block;
+  margin-bottom: var(--margin-bottom-label); /* 8px */
+  color: var(--color-base-text);
+}
+
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  margin-bottom: var(--margin-bottom-input); /* 8px */
+  padding: 0.5rem;
+  border: 1px solid red;
+  border-radius: 0.25rem; /* 4px = 0.25rem */
+  box-sizing: border-box;
+}
+
+.radio-group {
+  display: flex;
+  flex-direction: column;
+}
+
+.radio-group div {
+  display: flex;
+  align-items: center;
+  border: 1px solid green;
+  border-radius: 4px;
+  padding: 8px;
+  margin-bottom: 20px;
+  font-size: 1rem;
+  position: relative;
+}
+
+.radio-group label {
+  flex: 2;
+  margin: 0;
+  padding: 0;
+  position: relative;
+  right: 18%;
+}
+
+.radio-group input {
+  flex: 1;
+  margin: 0;
+  padding: 0;
+  cursor: pointer;
+  position: relative;
+  right: 10%;
 }
 
 /* --- FOOTER --- */
@@ -62,4 +122,21 @@ body {
 .fa-github {
   /* color: var(--color-base-primary-green); */
   margin-left: 0.5rem;
+}
+
+@media (min-width: 768px) {
+  .contact-form {
+    width: 50vw;
+  }
+  /* .contact-form {
+    width: 90%;
+    padding: 10px;
+  }
+  .radio-group label {
+    width: 100%;
+    margin-bottom: 10px;
+  }
+  .radio-group {
+    flex-direction: column;
+  } */
 }
