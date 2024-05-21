@@ -35,17 +35,25 @@
         <form action="#" method="post">
             <h1>Contact Us</h1>
 
-            <!-- First Name -->
-            <label for="first-name">
-                First Name <span>*</span>
-            </label>
-            <input type="text" id="first-name" name="first-name" required>
+            <div class="test">
+                <div class="box1">
+                    <!-- First Name -->
+                    <label for="first-name">
+                        First Name <span>*</span>
+                    </label>
+                    <input type="text" id="first-name" name="first-name" required>
+                </div>
+                <div class="box2">
+                    <!-- Last Name -->
+                    <label for="last-name">
+                        Last Name <span>*</span>
+                    </label>
+                    <input type="text" id="last-name" name="last-name" required>
+                </div>
+            </div>
 
-            <!-- Last Name -->
-            <label for="last-name">
-                Last Name <span>*</span>
-            </label>
-            <input type="text" id="last-name" name="last-name" required>
+
+
 
             <!-- Email -->
             <label for="email">
@@ -82,16 +90,19 @@
             <label for="message">
                 Message <span>*</span>
             </label>
-            <textarea name="message" id="message" required></textarea>
+            <textarea name="message" id="message" rows="15" required></textarea>
 
             <!-- Consent -->
-            <input type="checkbox" id="consent" name="consent" required>
-            <label for="consent">
-                I consent to being contacted by the team <span>*</span>
-            </label>
+            <div class="consent-group">
+                <input type="checkbox" id="consent" name="consent" required>
+                <label for="consent">
+                    I consent to being contacted by the team <span>*</span>
+                </label>
+            </div>
+
 
             <!-- Submit Button -->
-            <button type="submit">Submit</button>
+            <button type="submit" class="btn">Submit</button>
 
         </form>
 

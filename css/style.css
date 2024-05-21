@@ -28,7 +28,7 @@ body {
   font-optical-sizing: auto;
   font-weight: 400; /* 400, 700 */
   font-style: normal;
-  min-height: 100vh;
+  /* min-height: 100vh; */
 }
 
 .contact-form {
@@ -37,6 +37,7 @@ body {
   padding: 1rem;
   border-radius: 0.5rem; /* 8px = 0.5rem */
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  height: 100vh;
 }
 
 .contact-form h1 {
@@ -49,7 +50,7 @@ body {
 .contact-form label {
   display: block;
   margin-bottom: var(--margin-bottom-label); /* 8px */
-  color: var(--color-base-text);
+  color: var(--color-base-text-dark);
 }
 
 .contact-form input,
@@ -57,42 +58,82 @@ body {
   width: 100%;
   margin-bottom: var(--margin-bottom-input); /* 8px */
   padding: 0.5rem;
-  border: 1px solid red;
-  border-radius: 0.25rem; /* 4px = 0.25rem */
+  border: 1px solid var(--color-base-text);
+  border-radius: 0.3rem; /* 4px = 0.25rem */
   box-sizing: border-box;
+}
+
+.contact-form label span {
+  color: var(--color-btn-bg);
 }
 
 .radio-group {
   display: flex;
   flex-direction: column;
+  gap: 1.1rem;
+  margin-bottom: var(--margin-bottom-input); /* 8px */
 }
 
 .radio-group div {
   display: flex;
   align-items: center;
-  border: 1px solid green;
-  border-radius: 4px;
+  border: 1px solid var(--color-base-text);
+  border-radius: 0.3rem;
   padding: 8px;
-  margin-bottom: 20px;
   font-size: 1rem;
+  position: relative;
+}
+
+.radio-group label,
+.radio-group input {
+  margin: 0;
+  padding: 0;
   position: relative;
 }
 
 .radio-group label {
   flex: 2;
-  margin: 0;
-  padding: 0;
-  position: relative;
   right: 18%;
 }
 
 .radio-group input {
   flex: 1;
+  right: 10%;
+  cursor: pointer;
+}
+
+.consent-group {
+  display: flex;
+  align-items: center;
+  position: relative;
+  margin-top: 1.5rem;
+}
+
+.consent-group label,
+.consent-group input {
   margin: 0;
   padding: 0;
-  cursor: pointer;
   position: relative;
-  right: 10%;
+}
+
+.consent-group label {
+  flex: 2;
+  right: 25%;
+}
+
+.consent-group input {
+  flex: 1;
+  right: 15%;
+}
+
+.contact-form .btn {
+  width: 100%;
+  padding: 0.7rem;
+  margin-top: 2rem;
+  background-color: var(--color-btn-bg);
+  color: var(--color-form-bg);
+  border-radius: 0.5rem;
+  border: none;
 }
 
 /* --- FOOTER --- */
@@ -127,7 +168,32 @@ body {
 @media (min-width: 768px) {
   .contact-form {
     width: 50vw;
+    padding: 1.7rem;
   }
+
+  .contact-form textarea {
+    height: 6.25rem; /* 100px = 6.25rem */
+  }
+  .radio-group {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .radio-group div {
+    flex: 1;
+  }
+
+  .test {
+    display: flex;
+    justify-content: space-between;
+    gap: 1rem;
+  }
+
+  .box1,
+  .box2 {
+    flex: 1;
+  }
+
   /* .contact-form {
     width: 90%;
     padding: 10px;
