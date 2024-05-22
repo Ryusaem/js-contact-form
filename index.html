@@ -35,60 +35,62 @@
         <form action="#" method="post">
             <h1>Contact Us</h1>
 
-            <div class="test">
-                <div class="box1">
-                    <!-- First Name -->
-                    <label for="first-name">
-                        First Name <span>*</span>
-                    </label>
-                    <input type="text" id="first-name" name="first-name" required>
+            <fieldset>
+                <legend>Personal Information</legend>
+                <div class="name-fields">
+                    <div class="first-name-field">
+                        <label for="first-name">
+                            First Name <span aria-label="required">*</span>
+                        </label>
+                        <input type="text" id="first-name" name="first-name" required>
+                    </div>
+                    <div class="last-name-field">
+                        <label for="last-name">
+                            Last Name <span aria-label="required">*</span>
+                        </label>
+                        <input type="text" id="last-name" name="last-name" required>
+                    </div>
                 </div>
-                <div class="box2">
-                    <!-- Last Name -->
-                    <label for="last-name">
-                        Last Name <span>*</span>
-                    </label>
-                    <input type="text" id="last-name" name="last-name" required>
-                </div>
-            </div>
-
-
+            </fieldset>
 
 
             <!-- Email -->
             <label for="email">
-                Email Address <span>*</span>
+                Email Address <span aria-label="required">*</span>
             </label>
             <input type="email" id="email" name="email">
 
 
             <!-- Query Type -->
             <label for="query-type">
-                Query Type <span>*</span>
+                Query Type
             </label>
 
-            <div class="radio-group">
-                <div>
-                    <input type="radio" name="query-type" id="general-enquiry" value="general-enquiry" required>
-                    <label for="general-enquiry">
-                        General Enquiry
-                    </label>
+            <fieldset>
+                <legend>Query Type <span aria-label="required">*</span></legend>
+                <div class="radio-group">
+                    <div>
+                        <input type="radio" name="query-type" id="general-enquiry" value="general-enquiry" required>
+                        <label for="general-enquiry">
+                            General Enquiry
+                        </label>
+                    </div>
+
+                    <div>
+                        <input type="radio" name="query-type" id="support-request" value="support-request" required>
+                        <label for="support-request">
+                            Support Request
+                        </label>
+                    </div>
+
                 </div>
+            </fieldset>
 
-
-                <div>
-                    <input type="radio" name="query-type" id="support-request" value="support-request" required>
-                    <label for="support-request">
-                        Support Request
-                    </label>
-                </div>
-
-            </div>
 
 
             <!-- Message -->
             <label for="message">
-                Message <span>*</span>
+                Message <span aria-label="required">*</span>
             </label>
             <textarea name="message" id="message" rows="15" required></textarea>
 
