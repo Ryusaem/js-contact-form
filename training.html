@@ -5,41 +5,85 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width">
     <title>My test page</title>
+    <style>
+        body {
+            width: 80vw;
+            border: 2px red solid;
+            margin: 0 auto;
+            min-height: 100vh;
+        }
+
+        form {
+            width: 50vw;
+            border: 2px solid green;
+            margin: 0 auto;
+            margin-top: 20px;
+        }
+
+        div {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border: 1px solid blue;
+        }
+
+        label {
+            /* margin-left: 10px; */
+            width: 30%;
+            text-align: right;
+            margin-right: 10px;
+            border: 2px solid yellow;
+        }
+
+        input {
+            flex: auto;
+        }
+
+        label,
+        input,
+        button {
+            line-height: 2;
+            font-size: 14px;
+        }
+
+        input[type="radio"] {
+            width: 10px;
+            height: 10px;
+        }
+    </style>
 </head>
 
 <body>
-    <label for="price">Choose a maximum house price: </label>
-    <input type="range" name="price" id="price" min="50000" max="500000" step="100" value="250000" />
-    <output class="price-output" for="price"></output>
+    <div class="form-container">
+        <form action="#" method="post">
+            <fieldset>
+                <legend>Some radio stuff</legend>
+                <div>
+                    <input type="radio" name="stuff" value="pompom">
+                    <label for="stuff">Pompom</label>
+                </div>
+                <div>
+                    <input type="radio" name="stuff" value="potatoes">
+                    <label for="stuff">Potatoes</label>
+                </div>
+            </fieldset>
+            <div>
+                <label for="user_name">Name: </label>
+                <input type="text" name="user_name" id="user_name">
+            </div>
 
-    <input type="datetime-local" name="datetime" id="datetime" />
+            <div>
+                <label for="user_password">Password: </label>
+                <input type="password">
+            </div>
 
-    <input type="month" name="month" id="month" />
+            <div>
+                <label for="user_data">Date: </label>
+                <input type="date">
+            </div>
 
-    <input type="time" name="time" id="time" />
-
-    <input type="week" name="week" id="week" />
-
-    <label for="myDate">When are you available this summer?</label>
-    <input type="date" name="myDate" min="2013-06-01" max="2013-08-31" step="7" id="myDate" />
-
-    <input type="color" name="color" id="color" />
-
-
-
-
-
-
-    <script>
-        const priceInput = document.querySelector('#price');
-        const priceOutput = document.querySelector('.price-output');
-
-        priceOutput.textContent = priceInput.value;
-
-        priceInput.addEventListener("input", () => {
-            priceOutput.textContent = priceInput.value;
-        })
-    </script>
+        </form>
+    </div>
 
 </body>
 
