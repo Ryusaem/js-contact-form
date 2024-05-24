@@ -184,6 +184,8 @@ price.addEventListener("input", () => {
 });
 ```
 
+still a lot of thigns to learn...added this sentence for little commit message
+
 -
 
 ```html
