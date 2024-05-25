@@ -184,7 +184,9 @@ price.addEventListener("input", () => {
 });
 ```
 
-still a lot of thigns to learn...added this sentence for little commit message
+still a lot of thigns to learn...added this sentence for little commit message.
+Still did not make progress because I'm still reading and documentating myself about forms.
+I have made lot of anki card that can help me better get grasp of how to style things in forms.
 
 -
 
